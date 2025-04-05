@@ -4,47 +4,41 @@
  */
 package TallerPrimerPrevio3;
 
+import GenericLinkedList.LinkedList;
+
 /**
  *
- * @author auxiliarsc
+ * @author estudiante
  */
 public class Test {
     public static void main(String[] args) {
-        Tienda tienda= new Tienda();
-        Libro a= new Libro("principito","1",1000);
-        Libro b= new Libro("caperucita roja","2",2000);
-        Libro c= new Libro("hansel y gretel","3",1000);
-        Libro d= new Libro("3 cerditos","4",1000);
-        Libro e= new Libro("peter pan","5",1000);
-        Libro f= new Libro("la leyenda de aang","6",1000);
-        Libro g= new Libro("cien años de soledad","7",1000);
-        Libro h= new Libro("libro de cocina","8",1000);
-        tienda.addCatalogo(a);
-        tienda.addCatalogo(b);
-        tienda.addCatalogo(c);
-        tienda.addCatalogo(d);
-        tienda.addCatalogo(e);
-        tienda.addCatalogo(f);
-        tienda.addCatalogo(g);
-        tienda.addCatalogo(h);
-        System.out.println("prueba catalogo");
-        tienda.printCatalogo();
-        System.out.println("");
-        System.out.println("prueba carrito");
-        System.out.println("");
-        tienda.addCarrito(a);
-        tienda.addCarrito(b);
-        tienda.addCarrito(c);
-        tienda.addCarrito(a);
-        tienda.addCarrito(a);
-        tienda.addCarrito(b);
-        tienda.printCarrito();
-        System.out.println("");
-        System.out.println("prueba eliminando caperucita ");
-        tienda.retirarCarrito(b);
-        tienda.printCarrito();
-        System.out.println("prueba eliminando otro caperucita ");
-        tienda.retirarCarrito(b);
-        tienda.printCarrito();
+        LinkedList lista=new LinkedList();
+        LinkedList lista1=new LinkedList();
+        LinkedList lista2=new LinkedList();
+        LinkedList mayores=new LinkedList();
+        Algoritmos a= new Algoritmos();
+        lista.addFirst(2);
+        lista.addFirst(8);
+        lista.addFirst(7);
+        lista.addFirst(4);
+        lista.addFirst(1);
+        lista.addFirst(5);
+        lista=a.dividir(lista, 2);
+        lista.printList();
+        System.out.println("promedio= "+a.promedio(lista));
+        mayores=a.mayoresPromedio(lista, a.promedio(lista));
+        System.out.println("mayores al promedio= ");
+        mayores.printList();
+        System.out.println("suma pares= "+a.sumaPares(lista));
+        System.out.println("suma impares= "+a.sumaImpares(lista));
+        lista1.addFirst(2);
+        lista1.addFirst(4);
+        lista1.addFirst(3);
+        lista2.addFirst(2);
+        lista2.addFirst(4);
+        lista2.addFirst(2);
+        System.out.println(a.iguales(lista1, lista2));
+        
     }
+    
 }
