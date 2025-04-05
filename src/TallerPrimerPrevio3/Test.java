@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package taller;
+package TallerPrimerPrevio3;
 
 /**
  *
@@ -10,7 +10,7 @@ package taller;
  */
 public class Test {
     public static void main(String[] args) {
-        TiendaLibros tienda= new TiendaLibros();
+        Tienda tienda= new Tienda();
         Libro a= new Libro("principito","1",1000);
         Libro b= new Libro("caperucita roja","2",2000);
         Libro c= new Libro("hansel y gretel","3",1000);
@@ -35,14 +35,15 @@ public class Test {
         tienda.addCarrito(a);
         tienda.addCarrito(b);
         tienda.addCarrito(c);
-        tienda.addCarrito(d);
-        tienda.addCarrito(e);
-        tienda.addCarrito(f);
-        tienda.addCarrito(g);
-        tienda.addCarrito(h);
+        tienda.addCarrito(a);
+        tienda.addCarrito(a);
+        tienda.addCarrito(b);
         tienda.printCarrito();
         System.out.println("");
         System.out.println("prueba eliminando caperucita ");
+        tienda.retirarCarrito(b);
+        tienda.printCarrito();
+        System.out.println("prueba eliminando otro caperucita ");
         tienda.retirarCarrito(b);
         tienda.printCarrito();
     }

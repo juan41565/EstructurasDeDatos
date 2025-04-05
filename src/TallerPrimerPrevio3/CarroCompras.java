@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package taller;
+package TallerPrimerPrevio3;
 
 import java.util.ArrayList;
 
@@ -20,6 +20,7 @@ public class CarroCompras {
         for(int i=0;i<items.size();i++){
             if(items.get(i).getLibro().getIsbn().equals(libro.getIsbn())){
                 int a=items.get(i).getCantidad();
+                a++;
                 items.get(i).setCantidad(a++);
                 return;
             }
@@ -33,7 +34,14 @@ public class CarroCompras {
         for(int i=0;i<items.size();i++){
             if(items.get(i).getLibro().getIsbn().equals(libro.getIsbn())){
                 a=i;
+                if(items.get(i).getCantidad()>1){
+                   int b=items.get(i).getCantidad();
+                   b--;
+                   items.get(i).setCantidad(b);
+                }
+                else{
                 items.remove(i);
+                }
                 return a;
             }
         }
@@ -41,7 +49,7 @@ public class CarroCompras {
     }
     public void printCarro(){
         for(int i=0;i<items.size();i++){
-            System.out.println(items.get(i).getLibro().getTitulo());
+            System.out.println(items.get(i).getCantidad()+" libros de "+items.get(i).getLibro().getTitulo());
         }
     }
     public ArrayList<ItemCompra> getItems() {

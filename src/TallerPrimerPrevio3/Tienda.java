@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package taller;
+package TallerPrimerPrevio3;
 
 import java.util.ArrayList;
 
@@ -10,11 +10,11 @@ import java.util.ArrayList;
  *
  * @author auxiliarsc
  */
-public class TiendaLibros {
+public class Tienda {
     ArrayList<Libro> catalogo= new ArrayList();
    CarroCompras carrito=new CarroCompras();
 
-    public TiendaLibros() {
+    public Tienda() {
     }
 
     public void addCatalogo(Libro libro){
